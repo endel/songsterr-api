@@ -11,13 +11,14 @@ module Songsterr
         @data[key.to_s.camelize(:lower)]
       end
 
-      def attachment_url(key)
-        info(key)['attachmentUrl']
-      end
-
       def method_missing(method, *args, &block)
         info(method) or raise NoMethodError, "Method or attribute '#{method}' not exists on #{self.class.name}."
       end
+
+      protected
+        def attachment_url(key)
+          info(key)['attachmentUrl']
+        end
     end
   end
 end
