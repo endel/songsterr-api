@@ -3,7 +3,7 @@ require 'rake/rdoctask'
 
 Gem::Specification.new do |s|
   s.name = 'songsterr'
-  s.version = '0.1'
+  s.version = '0.1.1'
   s.summary = 'A Ruby wrapper for the Songsterr REST API'
   s.homepage = "http://github.com/endel/songsterr-api"
 
