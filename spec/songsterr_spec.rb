@@ -45,11 +45,17 @@ describe Songsterr do
 
     it 'should be a valid Track' do
       track.should be_an_instance_of Songsterr::Data::Track
-      track.instrument.should be_an_instance_of Songsterr::Data::Instrument
-      track.instrument.name.should be_a_kind_of String
       track.title.should be_a_kind_of String
       track.tuning.should be_a_kind_of String
       track.has_lyrics?.should be_a_kind_of Boolean
+
+      # Relationship
+      track.instrument.should be_an_instance_of Songsterr::Data::Instrument
+      track.instrument.name.should be_a_kind_of String
+      track.audios.should be_a_kind_of Array
+      track.audios.first.should be_an_instance_of Songsterr::Data::TrackAudio
+      track.layout_images.should be_a_kind_of Array
+      track.layout_images.first.should be_an_instance_of Songsterr::Data::TrackLayoutImage
     end
   end
 end

@@ -11,6 +11,26 @@ Installation
 Usage
 ----
 
+Finding songs.
+
+    # Each case above returns an Array of Song
+    Songsterr::Song.where(:pattern => "Marley")
+    Songsterr::Song.where(:artist => "Black Sabbath")
+    Songsterr::Song.where(:artists => ["Black Sabbath", "Metallica"])
+
+Getting song information:
+
+    # Get first Song from some artist
+    song = Songsterr::Song.where(:artist => "Black Sabbath").first
+    song.title
+    # => "Iron Man"
+
+    song.revision.tracks
+    # => [#<Songsterr::Data::Track>, #<Songsterr::Data::Track>, #<Songsterr::Data::Track>, ...]
+
+    song.revision.tracks.first.title
+    # => "Geezer Butler"
+
 
 License
 ----
