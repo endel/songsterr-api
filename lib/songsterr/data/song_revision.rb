@@ -4,16 +4,16 @@ module Songsterr
   module Data
     class SongRevision < Base
 
-      def most_popular_track
-        tracks.select {|track| track.id == info(:most_popular_track)['id'] }.first
-      end
-
       def tracks
         @tracks ||= info(:tracks).collect {|data| Track.new(data) }
       end
 
+      def most_popular_track
+        tracks.select {|track| track.id == info(:most_popular_track)['id'] }.first
+      end
+
       def guitar_pro_tab
-        @guitar_pro_url ||= info(:guitar_pro_tab)['attachmentUrl']
+        @guitar_pro_url ||= attachment_url(:guitar_pro_tab)
       end
 
     end

@@ -14,8 +14,9 @@ module Songsterr
         @instrument ||= Instrument.new(info(:instrument))
       end
 
-      def audios
+      def audio(speed=100)
         @audios ||= info(:track_audios).collect {|data| TrackAudio.new(data) }
+        @audios.select {|audio| audio.speed == speed }.first
       end
 
       def layout_images
