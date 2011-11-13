@@ -24,10 +24,8 @@ Getting song information:
     song = Songsterr::Song.where(:artist => "Black Sabbath").first
     song.title
     # => "Iron Man"
-
     song.revision.tracks
     # => [#<Songsterr::Data::Track>, #<Songsterr::Data::Track>, #<Songsterr::Data::Track>, ...]
-
     song.revision.tracks.first.title
     # => "Geezer Butler"
 
