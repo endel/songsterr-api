@@ -11,7 +11,7 @@ Installation
 Documentation
 ----
 
-See API documentation on [Github](http://endel.github.com/songsterr)
+See API documentation on [here](http://endel.github.com/songsterr-api)
 
 Usage sample
 ---
