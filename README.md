@@ -8,8 +8,13 @@ Installation
 ---
     gem install songsterr
 
-Usage
+Documentation
 ----
+
+See API documentation on [Github](http://endel.github.com/songsterr)
+
+Usage sample
+---
 
 Finding songs.
 
@@ -33,4 +38,4 @@ Getting song information:
 License
 ----
 
-This library is distributed under the MIT license. Please see the LICENSE file.
+This library is distributed under the MIT license. Please see the [LICENSE](https://github.com/endel/songsterr-api/blob/master/LICENSE) file.
